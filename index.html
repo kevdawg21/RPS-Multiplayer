@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="us-en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Multiplayer RPS!</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+	<div id="header">Paper, Rock, Scissors!</div>
+
+	<div id="signin">
+        <input id="name" type="text" autocomplete="off"><input id="submit-btn" value="Start" type="submit">
+    </div>
+    <div id="instructions">Type your name into the field above and click Start</div>
+
+    <div class="row text-center" id="game-console">
+
+		<div class="user col-sm-4" id="p1">
+			<p id="player1">Waiting for Player 1</p>
+			<p class="opt" id="rock1" data-opt="rock"></p>
+			<p class="opt" id="paper1" data-opt="paper"></p>
+			<p class="opt" id="scissors1" data-opt="scissors"></p>
+			<span id="wins1"></span><span id="losses1"></span>
+			<h1 id="selection1"></h1>	
+		</div>
+
+		<div class="user col-sm-4" id="ring">
+			<h1 id="verdict"></h1>
+		</div>
+
+		<div class="user col-sm-4" id="p2">
+			<p id="player2">Waiting for Player 2</p>
+			<p class="opt" id="rock2" data-opt="rock"></p>
+			<p class="opt" id="paper2" data-opt="paper"></p>
+			<p class="opt" id="scissors2" data-opt="scissors"></p>
+			<span id="wins2"></span><span id="losses2"></span>
+			<h1 id="selection2"></h1>
+		</div>
+	
+	</div>
+
+	<div class="row" id="chat-row">
+		<div class="col-sm-4"></div>
+		<div class="col-sm-4">	
+			<div id="input">
+				<form>
+					<div class="input-group col-xs-12 form-group chat-group">
+					<h3 class="chat-label">Chat: </h3>
+						<input type="text" id="chat"><br>
+							<span class="input-group-btn">
+								<button class="btn" type="submit" id="send-button">Send
+							</span>						
+					</div>
+					<div id="chat-window"></div>
+				</form>	
+			</div>
+		</div>
+		<div class="col-sm-4"></div>
+	</div>
+
+	<script src="assets/javascript/app.js"></script>
+
+</body>
+
+</html>
